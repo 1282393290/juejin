@@ -5,6 +5,10 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+import { Cell, CellGroup } from 'vant';
+
+Vue.use(Cell).use(CellGroup);
+
 new Vue({
   router,
   store,
