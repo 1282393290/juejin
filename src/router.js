@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// import Index from './views/Index/index.vue'
+// import Books from './views/Books/index.vue'
+// import Events from './views/Events/index.vue'
 
 Vue.use(Router)
 

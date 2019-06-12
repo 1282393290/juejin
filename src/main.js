@@ -3,11 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import './styles/base.less'
 Vue.config.productionTip = false
-
-import { Cell, CellGroup } from 'vant';
-
-Vue.use(Cell).use(CellGroup);
 
 new Vue({
   router,

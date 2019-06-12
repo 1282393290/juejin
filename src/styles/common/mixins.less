@@ -1,1 +1,61 @@
 // 存放一些公共的样式块
+
+.border-top {
+  position: relative;
+  height: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ededed;
+    transform: scaleY(0.5);
+  }
+}
+
+.border-bottom {
+  position: relative;
+  height: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ededed;
+    transform: scaleY(0.5);
+  }
+}
+
+.border-left {
+  position: relative;
+  height: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #ededed;
+    transform: scaleY(0.5);
+  }
+}
+
+.border-right {
+  position: relative;
+  height: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #ededed;
+    transform: scaleY(0.5);
+  }
+}

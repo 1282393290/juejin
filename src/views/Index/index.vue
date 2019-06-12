@@ -1,22 +1,29 @@
 <template>
   <div class="page-home">
-    我是首页
-    <van-cell-group>
-      <van-cell title="单元格" value="内容" />
-      <van-cell title="单元格" value="内容" label="描述信息" />
-    </van-cell-group>
+    <headCommon />
+    <Navigation />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import headCommon from '@/components/index/headCommon'
+import Navigation from '@/components/common/navigation'
 export default {
+  components: {
+    headCommon,
+    Navigation
+  },
   created () {
-    axios.post('https://localhost:8080/query',{
+    axios.post('http://localhost:8080/query',{
       extensions: {query: {id: "21207e9ddb1de777adeaca7a2fb38030"}},
       operationName: "",
       query: "",
       variables: {first: 20, after: "", order: "POPULAR"}
+    },{
+      headers: {
+        'X-Agent': 'Juejin/Web'
+      }
     })
       .then(response => {
         console.log(response)
